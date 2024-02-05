@@ -45,7 +45,7 @@
             <div class="bg-inner"></div>
         </div>
     </div>
-    <button class="btn block-cube block-cube-hover" type="button">
+    <button class="btn block-cube block-cube-hover" type="submit">
         <div class="bg-top">
             <div class="bg-inner"></div>
         </div>

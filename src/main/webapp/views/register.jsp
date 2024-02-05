@@ -15,37 +15,81 @@
 </head>
 <body>
 <c:import url="navbar.jsp" />
-<form class="form" autocomplete="off">
+<form class="form" autocomplete="off" style="width: 90%">
     <div class="control">
         <h1>
             Register
         </h1>
     </div>
-    <div class="control block-cube block-input">
-        <input name="docDniNif" type="text" placeholder="NIE / DNI / NIF" />
-        <div class="bg-top">
-            <div class="bg-inner"></div>
+    <div class="control">
+        <h4>
+            Datos Principales
+        </h4>
+    </div>
+    <div style="display: flex;justify-content: space-between">
+        <div class="control block-cube block-input" style="width: 24%">
+            <input name="docDniNif" type="text" placeholder="NIE / DNI / NIF" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
         </div>
-        <div class="bg-right">
-            <div class="bg-inner"></div>
+        <div class="control block-cube block-input" style="width: 24%">
+            <input name="email" type="email" placeholder="Email" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
         </div>
-        <div class="bg">
-            <div class="bg-inner"></div>
+        <div class="control block-cube block-input" style="width: 24%">
+            <input name="password" type="password" placeholder="Contraseña" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+        <div class="control block-cube block-input" style="width: 24%">
+            <input name="name" type="text" placeholder="Nombre Completo" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
         </div>
     </div>
-    <div class="control block-cube block-input">
-        <input name="password" type="password" placeholder="Contraseña" />
-        <div class="bg-top">
-            <div class="bg-inner"></div>
-        </div>
-        <div class="bg-right">
-            <div class="bg-inner"></div>
-        </div>
-        <div class="bg">
-            <div class="bg-inner"></div>
-        </div>
+    <br>
+    <hr>
+    <br>
+    <div class="control">
+        <h4>
+            Datos Secundarios
+        </h4>
     </div>
-    <button class="btn block-cube block-cube-hover" type="button">
+    <div style="display: flex;justify-content: space-around">
+
+
+
+    </div>
+    <button class="btn block-cube block-cube-hover" type="submit">
         <div class="bg-top">
             <div class="bg-inner"></div>
         </div>

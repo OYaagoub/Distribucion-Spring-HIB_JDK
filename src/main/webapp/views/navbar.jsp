@@ -40,6 +40,21 @@
             Iniciar Sesion
         </div>
     </a>
+        <a class="btn block-cube block-cube-hover" style="width: max-content;margin: 0px 10px" href="dashboard">
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+
+            <div class="text">
+                dashboard
+            </div>
+        </a>
     <a class="btn block-cube block-cube-hover" style="width: max-content;margin: 0px 10px" href="register">
         <div class="bg-top">
             <div class="bg-inner"></div>
