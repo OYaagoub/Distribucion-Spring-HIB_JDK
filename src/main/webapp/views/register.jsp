@@ -85,7 +85,7 @@
         </h4>
     </div>
     <div style="display: flex;justify-content: space-around">
-
+        <c:import url="includes/countries.jsp" />
 
 
     </div>

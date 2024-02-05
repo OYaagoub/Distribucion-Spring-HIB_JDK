@@ -14,5 +14,18 @@
 </head>
 <body>
 <c:import url="navbar.jsp" />
+<div>
+    <table>
+        <caption>titulo</caption>
+        <thead>
+            <tr>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
