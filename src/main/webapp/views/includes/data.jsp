@@ -11,7 +11,7 @@
 
 <fieldset style="width: 40%">
     <legend>User Information</legend>
-<form action="submit_form.php" method="post" style="width: 100%">
+<form:form action="insertClientData" method="post" modelAttribute="laReserva" style="width: 100%">
 
 
         <table style="width: 100%">
@@ -61,7 +61,7 @@
     <br>
 
     <input type="submit" value="Submit">
-</form>
+</form:form>
     <details style="width: 100%;padding: 10px;background: #020024;margin: 5px">
         <summary>datos Prancipales</summary>
         <table style="width: 100%;border:1px solid white;border-collapse: collapse;margin-top: 20px">

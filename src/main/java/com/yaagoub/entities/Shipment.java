@@ -1,6 +1,9 @@
 package com.yaagoub.entities;
 
+import com.yaagoub.validations.ShipmentStatusValidator;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -15,18 +18,22 @@ public class Shipment {
     @SequenceGenerator(name = "shipment_seq", sequenceName = "shipment_seq", allocationSize = 111111)
     @Id
     private long id;
+    @Size(max = 100, min = 20,message = "Title between 20 and 100 Characters")
     private String title;
+    @Min(value = 0, message = "Value must be greater than or equal to 0.23")
     private double mass;
+    @Min(value = 0, message = "Value must be greater than or equal to 0.23")
     private double amount;
+    @ShipmentStatusValidator
     private String status;
 
     @ManyToOne
     @JoinColumn(name = "docReceiver")
-    private Cliente receiver;
+    private Client receiver;
 
     @ManyToOne
     @JoinColumn(name = "docSender")
-    private Cliente sender;
+    private Client sender;
 
     @OneToMany(mappedBy = "shipment")
     private ArrayList<LiveLocation> liveLocations=new ArrayList<>();
@@ -34,7 +41,7 @@ public class Shipment {
     public Shipment() {
     }
 
-    public Shipment(long id, String title, double mass, double amount, String status, Cliente receiver, Cliente sender, ArrayList<LiveLocation> liveLocations) {
+    public Shipment(long id, String title, double mass, double amount, String status, Client receiver, Client sender, ArrayList<LiveLocation> liveLocations) {
         this.id = id;
         this.title = title;
         this.mass = mass;
@@ -45,7 +52,7 @@ public class Shipment {
         this.liveLocations = liveLocations;
     }
 
-    public Shipment(String title, double mass, double amount, String status, Cliente receiver, Cliente sender, ArrayList<LiveLocation> liveLocations) {
+    public Shipment(String title, double mass, double amount, String status, Client receiver, Client sender, ArrayList<LiveLocation> liveLocations) {
         this.title = title;
         this.mass = mass;
         this.amount = amount;
@@ -55,7 +62,7 @@ public class Shipment {
         this.liveLocations = liveLocations;
     }
 
-    public Shipment(long id, String title, double mass, double amount, Cliente receiver, Cliente sender, ArrayList<LiveLocation> liveLocations) {
+    public Shipment(long id, String title, double mass, double amount, Client receiver, Client sender, ArrayList<LiveLocation> liveLocations) {
         this.id = id;
         this.title = title;
         this.mass = mass;
@@ -65,7 +72,7 @@ public class Shipment {
         this.liveLocations = liveLocations;
     }
 
-    public Shipment(String title, double mass, double amount, Cliente receiver, Cliente sender) {
+    public Shipment(String title, double mass, double amount, Client receiver, Client sender) {
         this.title = title;
         this.mass = mass;
         this.amount = amount;
@@ -113,19 +120,19 @@ public class Shipment {
         this.amount = amount;
     }
 
-    public Cliente getReceiver() {
+    public Client getReceiver() {
         return receiver;
     }
 
-    public void setReceiver(Cliente receiver) {
+    public void setReceiver(Client receiver) {
         this.receiver = receiver;
     }
 
-    public Cliente getSender() {
+    public Client getSender() {
         return sender;
     }
 
-    public void setSender(Cliente sender) {
+    public void setSender(Client sender) {
         this.sender = sender;
     }
 

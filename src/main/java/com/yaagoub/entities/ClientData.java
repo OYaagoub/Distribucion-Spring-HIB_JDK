@@ -1,6 +1,10 @@
 package com.yaagoub.entities;
 
+import com.yaagoub.validations.ClientDataStatusValidator;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Pattern;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -8,43 +12,49 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "clientesData")
 @Scope("prototype")
-public class ClienteData {
+public class ClientData {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "clienteData_seq")
     @SequenceGenerator(name = "clienteData_seq", sequenceName = "clienteData_seq", allocationSize = 111111)
     @Id
     private long id;
     private String province;
+    @Min(5)
+    @Max(10)
     private int codePostal;
     private String country;
     private String city;
     private String address;
+    @Pattern(regexp = "^(\\+\\d{1,4}[-.\\s]?)?\\(\\d{1,4}\\)?[-.\\s]?\\d{1,10}$",
+            message = "Number not valid")
     private String phone;
+    @ClientDataStatusValidator
     private String status;
     @ManyToOne
-    private Cliente cliente;
+    private Client client;
 
-    public ClienteData() {
+    public ClientData() {
     }
 
-    public ClienteData(long id, String province, int codePostal, String country, String city, String address, String phone, Cliente cliente) {
+    public ClientData(long id, String province, int codePostal, String country, String city, String address, String phone, Client client) {
         this.id = id;
         this.province = province;
         this.codePostal = codePostal;
         this.country = country;
         this.city = city;
         this.address = address;
+
         this.phone = phone;
-        this.cliente = cliente;
+        this.client = client;
     }
 
-    public ClienteData(String province, int codePostal, String country, String city, String address, String phone, Cliente cliente) {
+    public ClientData(String province, int codePostal, String country, String city, String address, String phone, Client client) {
         this.province = province;
         this.codePostal = codePostal;
         this.country = country;
         this.city = city;
         this.address = address;
         this.phone = phone;
-        this.cliente = cliente;
+        this.client = client;
     }
 
     public String getStatus() {
@@ -111,11 +121,11 @@ public class ClienteData {
         this.phone = phone;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Client getCliente() {
+        return client;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setCliente(Client client) {
+        this.client = client;
     }
 }

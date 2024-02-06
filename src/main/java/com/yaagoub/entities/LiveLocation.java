@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Component
@@ -16,23 +17,23 @@ public class LiveLocation {
     @Id
     private long id;
     private String location;
-    private Date date;
+    private LocalDateTime date ;
     @ManyToOne
     private  Shipment shipment;
 
     public LiveLocation() {
     }
 
-    public LiveLocation(long id, String location, Date date, Shipment shipment) {
+    public LiveLocation(long id, String location, Shipment shipment) {
         this.id = id;
         this.location = location;
-        this.date = date;
+        this.date = LocalDateTime.now();
         this.shipment = shipment;
     }
 
-    public LiveLocation(String location, Date date, Shipment shipment) {
+    public LiveLocation(String location,  Shipment shipment) {
         this.location = location;
-        this.date = date;
+        this.date = LocalDateTime.now();
         this.shipment = shipment;
     }
 
@@ -52,11 +53,11 @@ public class LiveLocation {
         this.location = location;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 

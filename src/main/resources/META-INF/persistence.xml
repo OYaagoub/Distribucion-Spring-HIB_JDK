@@ -4,9 +4,9 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
   <persistence-unit name="OSM">
-    <class>com.yaagoub.entities.Cliente</class>
+    <class>com.yaagoub.entities.Client</class>
     <class>com.yaagoub.entities.Shipment</class>
-    <class>com.yaagoub.entities.ClienteData</class>
+    <class>com.yaagoub.entities.ClientData</class>
     <class>com.yaagoub.entities.LiveLocation</class>
 
     <properties>

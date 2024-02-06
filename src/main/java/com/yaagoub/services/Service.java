@@ -1,6 +1,6 @@
 package com.yaagoub.services;
 
-import com.yaagoub.entities.Cliente;
+import com.yaagoub.entities.Client;
 import com.yaagoub.entities.Shipment;
 import com.yaagoub.repository.ImplementsDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ public class Service {
     ImplementsDAO dao;
 
     @Autowired
-    Cliente clit;
+    Client clit;
 
     @Autowired
     Shipment shin;
