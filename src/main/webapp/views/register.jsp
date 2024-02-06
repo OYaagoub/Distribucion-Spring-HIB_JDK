@@ -14,7 +14,7 @@
 
 </head>
 <body>
-<c:import url="navbar.jsp" />
+<c:import url="includes/navbar.jsp" />
 <form class="form" autocomplete="off" style="width: 90%">
     <div class="control">
         <h1>
@@ -86,6 +86,46 @@
     </div>
     <div style="display: flex;justify-content: space-around">
         <c:import url="includes/countries.jsp" />
+
+
+    </div>
+    <div style="display: flex;justify-content: space-around">
+        <div class="control block-cube block-input" style="width: 24%">
+            <input name="address" type="text" placeholder="C/AV. Nºpuerta .." />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+        <div class="control block-cube block-input" style="width: 24%">
+            <input name="name" type="text" placeholder="Codigo postal" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
+        <div class="control block-cube block-input" style="width: 24%">
+            <input name="phone" type="text" placeholder="telefono con extencion +XX" />
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+        </div>
 
 
     </div>

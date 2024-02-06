@@ -13,19 +13,15 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/login.css">
 </head>
 <body>
-<c:import url="navbar.jsp" />
-<div>
-    <table>
-        <caption>titulo</caption>
-        <thead>
-            <tr>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr></tr>
-        </tbody>
-    </table>
+<c:import url="includes/navbar.jsp" />
+<div style="width: 100%; display: flex;justify-content: space-between">
+    <c:import url="includes/data.jsp" />
+    <c:import url="includes/newEditShipment.jsp" />
 </div>
+<div style="width: 100%; display: flex;justify-content: space-between">
+    <c:import url="includes/receipts.jsp" />
+    <c:import url="includes/shipments.jsp" />
+</div>
+
 </body>
 </html>

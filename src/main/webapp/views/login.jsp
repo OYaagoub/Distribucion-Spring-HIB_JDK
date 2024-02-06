@@ -14,7 +14,7 @@
 
 </head>
 <body>
-<c:import url="navbar.jsp" />
+<c:import url="includes/navbar.jsp" />
 <form class="form" autocomplete="off">
     <div class="control">
         <h1>

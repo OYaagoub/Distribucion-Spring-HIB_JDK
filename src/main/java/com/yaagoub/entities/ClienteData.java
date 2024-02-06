@@ -16,35 +16,55 @@ public class ClienteData {
     private String province;
     private int codePostal;
     private String country;
+    private String city;
     private String address;
     private String phone;
+    private String status;
     @ManyToOne
     private Cliente cliente;
 
     public ClienteData() {
     }
 
-    public ClienteData(long id, String province, int codePostal, String country, String address, String phone, Cliente cliente) {
+    public ClienteData(long id, String province, int codePostal, String country, String city, String address, String phone, Cliente cliente) {
         this.id = id;
         this.province = province;
         this.codePostal = codePostal;
         this.country = country;
+        this.city = city;
         this.address = address;
         this.phone = phone;
         this.cliente = cliente;
     }
 
-    public ClienteData(String province, int codePostal, String country, String address, String phone, Cliente cliente) {
+    public ClienteData(String province, int codePostal, String country, String city, String address, String phone, Cliente cliente) {
         this.province = province;
         this.codePostal = codePostal;
         this.country = country;
+        this.city = city;
         this.address = address;
         this.phone = phone;
         this.cliente = cliente;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public long getId() {
         return id;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public void setId(long id) {

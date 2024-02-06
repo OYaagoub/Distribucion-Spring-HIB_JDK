@@ -18,6 +18,7 @@ public class Shipment {
     private String title;
     private double mass;
     private double amount;
+    private String status;
 
     @ManyToOne
     @JoinColumn(name = "docReceiver")
@@ -31,6 +32,27 @@ public class Shipment {
     private ArrayList<LiveLocation> liveLocations=new ArrayList<>();
 
     public Shipment() {
+    }
+
+    public Shipment(long id, String title, double mass, double amount, String status, Cliente receiver, Cliente sender, ArrayList<LiveLocation> liveLocations) {
+        this.id = id;
+        this.title = title;
+        this.mass = mass;
+        this.amount = amount;
+        this.status = status;
+        this.receiver = receiver;
+        this.sender = sender;
+        this.liveLocations = liveLocations;
+    }
+
+    public Shipment(String title, double mass, double amount, String status, Cliente receiver, Cliente sender, ArrayList<LiveLocation> liveLocations) {
+        this.title = title;
+        this.mass = mass;
+        this.amount = amount;
+        this.status = status;
+        this.receiver = receiver;
+        this.sender = sender;
+        this.liveLocations = liveLocations;
     }
 
     public Shipment(long id, String title, double mass, double amount, Cliente receiver, Cliente sender, ArrayList<LiveLocation> liveLocations) {
@@ -49,6 +71,14 @@ public class Shipment {
         this.amount = amount;
         this.receiver = receiver;
         this.sender = sender;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public long getId() {

@@ -13,8 +13,8 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/login.css">
 </head>
 <body>
-<c:import url="navbar.jsp" />
-<form class="form" autocomplete="off" style="width: 600px">
+<c:import url="includes/navbar.jsp" />
+<form class="form" action="follow" method="get" style="width: 600px">
     <div class="control">
         <h1>
             Conseguir El Envio
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <button class="btn block-cube block-cube-hover" type="button">
+    <button class="btn block-cube block-cube-hover" type="submit">
         <div class="bg-top">
             <div class="bg-inner"></div>
         </div>
